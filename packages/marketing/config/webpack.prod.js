@@ -8,7 +8,7 @@ const prodConfig = {
 	output: {
 		filename: '[name].[contentHash].js',
 	},
-	plugin: [
+	plugins: [
 		new ModuleFederationPlugin({
 			name: 'marketing',
 			exposes: {
