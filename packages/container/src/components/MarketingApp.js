@@ -6,8 +6,8 @@ export default () => {
 
 	useEffect(() => {
 		mount(ref.current, {
-			onNavigate: ({ pathname }) => {
-				console.log(pathname);
+			onNavigate: ({ pathname: nextPathname }) => {
+				console.log(nextPathname);
 			},
 		});
 	});
