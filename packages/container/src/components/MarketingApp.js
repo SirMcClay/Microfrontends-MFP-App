@@ -6,8 +6,8 @@ export default () => {
 
 	useEffect(() => {
 		mount(ref.current, {
-			onNavigate: () => {
-				console.log('The container notice navigation in Marketing');
+			onNavigate: (location) => {
+				console.log(location);
 			},
 		});
 	});
