@@ -14,8 +14,12 @@ const mount = (el, { onNavigate }) => {
 	ReactDOM.render(<App history={history} />, el);
 
 	return {
-		onParentNavigate() {
-			console.log('Container just navigated');
+		onParentNavigate({ pathname: nextPathname }) {
+			const { pathname } = history.location;
+
+			if (pathname !== nextPathname) {
+				history.push(nextPathname);
+			}
 		},
 	};
 };
