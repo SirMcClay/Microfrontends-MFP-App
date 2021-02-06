@@ -16,7 +16,7 @@ export default () => {
 					history.push(nextPathname);
 				}
 			},
-			onAuthChange: () => {
+			onSignIn: () => {
 				console.log('User signed in');
 			},
 		});
